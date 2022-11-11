@@ -1,0 +1,22 @@
+.title {
+    font-size : 30px;
+    cursor: pointer;
+    color: rgb(247, 12, 12);
+    text-align: left;
+
+
+    
+}
+
+.text {
+    font-size : 10px;
+    cursor: pointer;
+    color: rgb(243, 238, 238);
+    text-align: left;  
+}
+
+.hr {
+    height: 10px; 
+    color: aqua;  
+}
+

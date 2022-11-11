@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Athar</title>
+</head>
+<body style="background-color: black;">
+    <div class = "container-fluid">
+        <div class = "row">
+            <div class = "col-sm-4"></div>
+            <div class = "col-sm-4">
+
+                <h2 style="color: red;">Add To Do List</h2>
+                <input type="text" id="title" placeholder="To do"> <br><br>
+                <textarea type="text"  id="dis" placeholder="Discrpition" ></textarea> <br>
+                <button  style="color: red;"id = "addtodolist">Add</button>
+
+            </div>
+        </div>
+    </div>
+
+
+  <!-- Body -->
+  <hr style="background-color: white;">
+    <div class = "container-fluid">
+        <div class = "row">
+            <div></div>
+            <div col="col-sm-12"  >
+                <h2 style="color: red;">My To Do List</h2>
+            </div>
+            <div class="col-sm-2"></div>
+            <div class = "col-sm-4 block" id = "todolist" style="border-color: white;">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+     <!-- Footer -->
+    <hr style="background-color: white;">
+	<div class="container-fluid" >
+		<div class="row"> 
+			<div class="col-sm-4">
+				<h6 style="color: red; "> Disclaimer Developed by Reporteq Dev Team</h6>
+				<p style="color: darkgray;">&copy; Copyright 2012 - 2022 | All Rights Reserved <p>
+			</div>
+			<div class="col-sm-4">
+				<h5 style="color: red; "> Location </h5>
+				<h5 style="color: red; "> Reporteq Pakistan Pvt. Ltd. </h5>
+				<h6 style="color: rgb(255, 255, 255);"> Office No. 708 7th floor Al-Hafeez Heights, Lahore</h6>
+				<h6 style="color: rgb(63, 151, 228);"> <a onclick="window.open('https://goo.gl/maps/5foTApC12iHBd2FfA', '_blank')" role = "button"> Reporteq Pakistan Pvt. Ltd. </a></h6>
+			</div>
+			<div class="col-sm-4">
+				<h5 style="color: red; "> Fellow us on </h5>   
+                <a class="btn text-white m-1" onclick="window.open('http://www.facebook.com/', '_blank')" style="background-color: #506fb4;"  role="button"><i class="fab fa-facebook"></i>Fackbook</a><br>
+                <a class="btn text-white m-1" onclick="window.open('http://www.twitter.com/', '_blank')" style="background-color: #8dacef;"  role="button"><i class="fab fa-twitter"></i>Twitter</a><br>
+                <a class="btn text-white m-1" onclick="window.open('https://www.linkedin.com/company/reporteq', '_blank')" style="background-color: #4d78d4;"  role="button"><i class="fab fa-linkedin"></i>LinkedIn</a><br>
+              </div>
+</div>
+<script src="js/bootstrap.min.js"></script>
+<script src="todo.js"></script>
+</body>
+</html>
