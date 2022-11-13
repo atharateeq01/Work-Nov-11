@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.6.4.js"></script>
+    <title>Athar</title>
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+   <!-- Header -->  
+<div class="display_simple"></div>
+<script>
+
+$.getJSON('https://jsonplaceholder.typicode.com/todos', function(data){
+    var display = `<div class = "container-fluid">
+        <div class = "row">
+            <div class = "col-sm-3"></div>
+            <div class = "col-sm-8">
+        <h5> Title : ${data[0].title}</h5>
+        <p>Completed : ${data[0].completed}</p>
+        <p>User Id : ${data[0].userId}</p>
+        <p>Id :${data[0].id}</p></div>
+        <div class = "col-sm-1"></div>
+`
+    for(i = 0 ; i < data.length; i= i + 1){
+        var display = display + `<div class = "col-sm-3"></div>
+        <div class = "col-sm-8">
+            <h5> Title : ${data[i].title}</h5>
+            <p>Completed : ${data[i].completed}</p>
+            <p>User Id : ${data[i].userId}</p>
+            <p>Id :${data[i].id}</p></div>
+    <div class = "col-sm-1"></div>
+`
+    }
+    var display = display + `</div></div>   
+`
+    
+    $(".display_simple").html(display);
+});
+</script>
+
+
+  <!-- Body -->
+ <hr style="background-color: rgb(223, 58, 58);">
+<div class="display"> </div>
+ <script>
+
+  $.getJSON('https://jsonplaceholder.typicode.com/todos', function(data){
+    var display = `<div class = "container-fluid">
+        <div class = "row">
+            <div class = "col-sm-4"><div class="card">
+        <div class="card-body">
+        <h5 id = "${data[0].completed}" class="card-title ${data[0].completed}"> ${data[0].title}</h5>
+        <p id = "${data[0].completed}" class="card-text ${data[0].completed}">${data[0].completed}</p></div></div></div>
+`
+    for(i = 0 ; i < data.length; i= i + 1){
+        var display = display + `<div class = "col-sm-4"><div class="card">
+            <div class="card-body">
+            <h5 id = "${data[i].completed}" class="card-title ${data[i].completed}"> ${data[i].title}</h5>
+            <p id = "${data[i].completed}" class="card-text ${data[i].completed}">${data[i].completed}</p></div></div></div>
+`
+    }
+    var display = display + `</div></div>
+`
+   
+    $(".display").html(display);
+
+   
+
+    
+  });
+
+ 
+</script>
+  <!-- Footer -->
+    <hr style="background-color: rgb(223, 58, 58);">
+	<div class="container-fluid" >
+		<div class="row"> 
+			<div class="col-sm-4">
+				<h6 style="color: red; "> Disclaimer Developed by Reporteq Dev Team</h6>
+				<p style="color: darkgray;">&copy; Copyright 2012 - 2022 | All Rights Reserved <p>
+			</div>
+			<div class="col-sm-4">
+				<h5 style="color: red; "> Location </h5>
+				<h5 style="color: red; "> Reporteq Pakistan Pvt. Ltd. </h5>
+				<h6 style="color: rgb(10, 9, 9);"> Office No. 708 7th floor Al-Hafeez Heights, Lahore</h6>
+				<h6 style="color: rgb(63, 151, 228);"> <a onclick="window.open('https://goo.gl/maps/5foTApC12iHBd2FfA', '_blank')" role = "button"> Reporteq Pakistan Pvt. Ltd. </a></h6>
+			</div>
+			<div class="col-sm-4">
+				<h5 style="color: red; "> Fellow us on </h5>   
+                <a class="btn text-white m-1" onclick="window.open('http://www.facebook.com/', '_blank')" style="background-color: #506fb4;"  role="button"><i class="fab fa-facebook"></i>Fackbook</a><br>
+                <a class="btn text-white m-1" onclick="window.open('http://www.twitter.com/', '_blank')" style="background-color: #8dacef;"  role="button"><i class="fab fa-twitter"></i>Twitter</a><br>
+                <a class="btn text-white m-1" onclick="window.open('https://www.linkedin.com/company/reporteq', '_blank')" style="background-color: #4d78d4;"  role="button"><i class="fab fa-linkedin"></i>LinkedIn</a><br>
+              </div>
+</div>
+<script src="js/bootstrap.min.js"></script>
+<script src="todo.js"></script>
+</body>
+</html>
